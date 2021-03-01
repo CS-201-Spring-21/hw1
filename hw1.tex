@@ -275,6 +275,20 @@ Some of the above methods are left unimplemented, as indicated by a \texttt{pass
 
 You have to derive two classes---\texttt{ArrayList} and \texttt{PointerList}---from \texttt{MyList} and provide their implementations in the same file. \texttt{ArrayList} implements the list using \href{https://www.programiz.com/python-programming/array}{python arrays} and the \texttt{PointerList} implements it based on pointers using nodes. See the implementation of BST in Listing \ref{lst:bst} on Page \pageref{lst:bst}, also included in the accompanying file \texttt{src/bst.py}, to understand pointers and nodes in python. 
 
+
+\subsection{Tips}
+
+Below are some tips to avoid the errors that have previously caused tests to fail. Following these may save you many frustrating hours of debugging!
+\begin{itemize}
+\item Use \texttt{integer} division instead of \texttt{float} division.
+\item When writing gray values to file, make sure to clamp them to [0,255].
+\item Take care about imagine indexing.
+\item Be careful when creating a copy of the image. Use the copy where needed and the original where needed.
+\item Do not forget to average the RGB values when the corresponding flag in \texttt{apply\_mask} is enabled.
+\end{itemize}
+
+You will need to install \href{https://pillow.readthedocs.io/en/5.3.x/index.html}{Pillow} which will prove the \texttt{PIL} module used in the provided code.
+
 \section{Testing}
 
 Once you have successfully implemented image operations and the two list implementations, you can test your code by creating an image and performing operations on it. 

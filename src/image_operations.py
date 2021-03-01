@@ -41,7 +41,7 @@ def apply_mask(src: MyImage, maskfile: str, average: bool = True) -> MyImage:
     Args:
     - src: the image on which the mask is to be applied
     - maskfile: path to a file specifying the mask to be applied
-    - average: if True, averaging should to be done when applying the mask
+    - average: if True, averaging should to done when applying the mask
 
     Returns:
     an image which the result of applying the specified mask to src.
